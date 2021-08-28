@@ -11,7 +11,7 @@ server.use(express.json()); //middleware. using  post to read  req.body
 
 // ******************************************************************************************************* 
 // use books
-mongoose.connect(`${process.env.DB_LINK}`, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(`${process.env.DB_LINK}`, { useNewUrlParser: true, useUnifiedTopology: true ,useFindAndModify:false});
 
 //Schema
 const BookSchema = require("./moduls/BookSchema.js");
